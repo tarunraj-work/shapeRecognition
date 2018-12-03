@@ -5,7 +5,8 @@ import cv2
 
 # load the image and resize it to a smaller factor so that
 # the shapes can be approximated better
-image = cv2.imread("tests/handRectangle.png")
+testID = raw_input('Enter file to analyze: ')
+image = cv2.imread(testID)
 resized = imutils.resize(image, width=300)
 ratio = image.shape[0] / float(resized.shape[0])
 
